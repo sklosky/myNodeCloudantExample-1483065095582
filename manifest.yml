@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: myNodeCloudantExample
+  host: myNodeCloudantExample
+  disk_quota: 1024M
+  services:
+  - myNodeCloudantExample-cloudantNoSQLDB
