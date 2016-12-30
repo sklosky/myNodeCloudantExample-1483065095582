@@ -19,8 +19,10 @@ var s3;
 
 var ep;
 
-var accessKeyId =  'VfAY8vRGl6LvV4XjZaM7' || 'xxxxxx';
-var secretAccessKey = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ' || '+xxxxxx+B+xxxxxxx';
+//var accessKeyId =  'VfAY8vRGl6LvV4XjZaM7' || 'xxxxxx';
+var accessKeyId =  'VfAY8vRGl6LvV4XjZaM7';
+//var secretAccessKey = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ' || '+xxxxxx+B+xxxxxxx';
+var secretAccessKey = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ';
 
 var aws = require('aws-sdk');
 
@@ -104,8 +106,8 @@ function initS3(){
         secretAccessKey: secretAccessKey
     });	
     console.log('enstantiating s3 object');
-	s3 = new aws.S3();
-	//s3.service.endpoint.hostname = 's3-api.us-geo.objectstorage.softlayer.net';
+	s3 = new aws.S3({endpoint: ep});
+	s3.service.endpoint.hostname == 's3-api.us-geo.objectstorage.softlayer.net';
 	console.log('listing bucket contents');
 	s3.listBuckets(function(err, data) {
   		if (err) console.log(err, err.stack); // an error occurred
