@@ -1,8 +1,10 @@
-# Node.js Cloudant Starter Overview
+# S3 Navigator Overview
 
-The Node.js Cloudant Starter demonstrates how to use the Bluemix Cloudant NoSQL DB service. The app displays persisted files and lets the user upload new files or delete old files.
+This sample program is designed to demonstrate aws s3 client programming techniques
 
-## Decomposition Instructions
+## Notes
 
-* See app.js for how to obtain and use the Cloudant credentials as well as the file CRUD API
-* See public/scripts/index.js and public/scripts/util.js for how the front-end calls the back-end API
+* This sample was created using the Node.js plus Cloudient "Starter" Boilerplate from the Bluemix Catalog
+* Modified to strip out the Cloudient support and insert AWS S3 support
+* Designed to work with IBM Cloud Object storage
+* Designed to demonstrate interoperability between Bluemix Apps and Bluemix Infrastructure
