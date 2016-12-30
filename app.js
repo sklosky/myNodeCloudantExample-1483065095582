@@ -101,7 +101,7 @@ function initS3(){
         secretAccessKey: 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ'
     });	
 	s3 = new aws.S3();
-	s3.service.endpoint.hostname = 's3-api.us-geo.objectstorage.softlayer.net';
+	//s3.service.endpoint.hostname = 's3-api.us-geo.objectstorage.softlayer.net';
 }
 
 initS3();
