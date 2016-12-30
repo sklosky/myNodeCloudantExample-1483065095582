@@ -107,7 +107,7 @@ function initS3(){
     });	
     console.log('enstantiating s3 object');
 	s3 = new aws.S3({endpoint: ep});
-	s3.service.endpoint.hostname == 's3-api.us-geo.objectstorage.softlayer.net';
+	//s3.service.endpoint.hostname == 's3-api.us-geo.objectstorage.softlayer.net';
 	console.log('listing bucket contents');
 	s3.listBuckets(function(err, data) {
   		if (err) console.log(err, err.stack); // an error occurred
