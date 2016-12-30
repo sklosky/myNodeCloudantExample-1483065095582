@@ -102,6 +102,10 @@ function initS3(){
     });	
 	s3 = new aws.S3();
 	//s3.service.endpoint.hostname = 's3-api.us-geo.objectstorage.softlayer.net';
+	s3.listBuckets(function(err, data) {
+  		if (err) console.log(err, err.stack); // an error occurred
+  		else     console.log(data);           // successful response
+	});
 }
 
 initS3();
