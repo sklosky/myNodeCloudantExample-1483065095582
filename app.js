@@ -19,6 +19,9 @@ var s3;
 
 var ep;
 
+var accessKeyId =  'VfAY8vRGl6LvV4XjZaM7' || 'xxxxxx';
+var secretAccessKey = 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ' || '+xxxxxx+B+xxxxxxx';
+
 var aws = require('aws-sdk');
 
 var fileToUpload;
@@ -97,11 +100,13 @@ function initS3(){
 	//is used longer term
 	//will rotate keys via Bluemix Infrastructure console as needed to kill these hardcoded credentials
     aws.config.update({
-        accessKeyId: 'VfAY8vRGl6LvV4XjZaM7',
-        secretAccessKey: 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ'
+        accessKeyId: accessKeyId,
+        secretAccessKey: secretAccessKey
     });	
+    console.log('enstantiating s3 object');
 	s3 = new aws.S3();
 	//s3.service.endpoint.hostname = 's3-api.us-geo.objectstorage.softlayer.net';
+	console.log('listing bucket contents');
 	s3.listBuckets(function(err, data) {
   		if (err) console.log(err, err.stack); // an error occurred
   		else     console.log(data);           // successful response
