@@ -96,7 +96,7 @@ function initS3(){
 	//note -- hardcoding this for early testing.  Will be moved to VCAP_SERVICES for security if this code sample
 	//is used longer term
 	//will rotate keys via Bluemix Infrastructure console as needed to kill these hardcoded credentials
-    AWS.config.update({
+    aws.config.update({
         accessKeyId: 'VfAY8vRGl6LvV4XjZaM7',
         secretAccessKey: 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ'
     });	
