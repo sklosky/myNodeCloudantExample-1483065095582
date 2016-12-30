@@ -15,6 +15,12 @@ var db;
 
 var cloudant;
 
+var s3;
+
+var ep;
+
+var aws = require('aws-sdk');
+
 var fileToUpload;
 
 var dbCredentials = {
@@ -84,6 +90,21 @@ function initDBConnection() {
 }
 
 initDBConnection();
+
+function initS3(){
+	ep = new aws.Endpoint('s3-api.us-geo.objectstorage.softlayer.net');
+	//note -- hardcoding this for early testing.  Will be moved to VCAP_SERVICES for security if this code sample
+	//is used longer term
+	//will rotate keys via Bluemix Infrastructure console as needed to kill these hardcoded credentials
+    AWS.config.update({
+        accessKeyId: 'VfAY8vRGl6LvV4XjZaM7',
+        secretAccessKey: 'C6lhiZo1U32iHykYrTCa7SDRP9BUtesLzd7RVdBQ'
+    });	
+	s3 = new aws.S3();
+	s3.service.endpoint.hostname = 's3-api.us-geo.objectstorage.softlayer.net';
+}
+
+initS3();
 
 app.get('/', routes.index);
 
