@@ -26,6 +26,7 @@ header, footer {
 
 .banner {
 	display: table;
+	width: 100%;
 	background: #5586D6;
 	color: #fff;
 	padding: 1px;
