@@ -25,11 +25,16 @@ header, footer {
 }
 
 .banner {
+	display: table;
 	background: #5586D6;
 	color: #fff;
 	padding: 1px;
   	text-align: center;
-  	line-height: 200px;
+}
+
+.bannerText {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /* positions */
