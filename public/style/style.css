@@ -41,13 +41,13 @@ header, footer {
 .bannerTextR {
     display: table-cell;
     vertical-align: middle;
-    align: right;
+    text-align: right;
 }
 
 .bannerTextL {
     display: table-cell;
     vertical-align: middle;
-    align: left;
+    text-align: left;
 }
 
 /* positions */
