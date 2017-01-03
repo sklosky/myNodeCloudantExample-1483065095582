@@ -38,6 +38,18 @@ header, footer {
     vertical-align: middle;
 }
 
+.bannerTextR {
+    display: table-cell;
+    vertical-align: middle;
+    align: right;
+}
+
+.bannerTextL {
+    display: table-cell;
+    vertical-align: middle;
+    align: left;
+}
+
 /* positions */
 header {
 	padding-top: 20px;
